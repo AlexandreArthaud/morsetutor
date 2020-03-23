@@ -1,0 +1,10 @@
+C:\Users\aldua\source\repos\Morse Tutor\bin\Debug\Morse Tutor.exe.config
+C:\Users\aldua\source\repos\Morse Tutor\bin\Debug\Morse Tutor.exe
+C:\Users\aldua\source\repos\Morse Tutor\bin\Debug\Morse Tutor.pdb
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse Tutor.csprojAssemblyReference.cache
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse_Tutor.Form1.resources
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse_Tutor.Properties.Resources.resources
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse Tutor.csproj.GenerateResource.cache
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse Tutor.csproj.CoreCompileInputs.cache
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse Tutor.exe
+C:\Users\aldua\source\repos\Morse Tutor\obj\Debug\Morse Tutor.pdb
