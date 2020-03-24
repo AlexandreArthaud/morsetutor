@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 87);
+            this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 13);
             this.label1.TabIndex = 2;
@@ -64,9 +64,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 98);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(522, 641);
+            this.pictureBox1.Size = new System.Drawing.Size(522, 603);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 

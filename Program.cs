@@ -14,7 +14,7 @@ namespace Morse_Tutor
 
     static class Program
     {
-        static internal string PlayedLetter = "";
+        static internal char PlayedLetter;
         static int UnitLength = 1000;
         static int Frequency = 2000;
         static Dictionary<char, string> Letters = new Dictionary<char, string> {
@@ -90,7 +90,7 @@ namespace Morse_Tutor
             
             PlayLetter(randomLetter);
 
-            PlayedLetter = randomLetter.ToString();
+            PlayedLetter = randomLetter;
         }
     }
 }

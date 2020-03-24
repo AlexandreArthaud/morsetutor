@@ -12,6 +12,8 @@ namespace Morse_Tutor
 {
     public partial class Form1 : Form
     {
+        static bool LetterHasPlayed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -22,14 +24,30 @@ namespace Morse_Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.PlayLetter();
+            if (!LetterHasPlayed)
+            {
+                Program.PlayLetter();
+
+                label1.Text = "Waiting for an answer...";
+                LetterHasPlayed = true;
+                textBox1.Enabled = true;
+                button1.Text = "Replay";
+            }
+            else
+            {
+                Program.PlayLetter(Program.PlayedLetter);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == Program.PlayedLetter)
+            if (textBox1.Text.Length > 0 && textBox1.Text[0] == Program.PlayedLetter)
             {
-                label1.Text = "SUCCESS! \n\n Answer was indeed: " + Program.PlayedLetter;
+                label1.Text = "Sucess! Answer was indeed: " + Program.PlayedLetter;
+                
+                LetterHasPlayed = false;
+                textBox1.Enabled = false;
+                button1.Text = "RANDOM LETTER";
                 textBox1.Text = "";
             }
         }
