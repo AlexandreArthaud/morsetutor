@@ -15,7 +15,10 @@ namespace Morse_Tutor
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.ImageLocation = Properties.Resources.MorseCodeImagePath;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,11 +32,6 @@ namespace Morse_Tutor
                 label1.Text = "SUCCESS! \n\n Answer was indeed: " + Program.PlayedLetter;
                 textBox1.Text = "";
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
