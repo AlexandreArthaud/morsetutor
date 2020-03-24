@@ -19,6 +19,9 @@ namespace Morse_Tutor
             InitializeComponent();
             pictureBox1.ImageLocation = Properties.Resources.MorseCodeImagePath;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.BackColor = Color.White;
+
+            checkBox1.Checked = true;
         }
 
 
@@ -49,6 +52,18 @@ namespace Morse_Tutor
                 textBox1.Enabled = false;
                 button1.Text = "RANDOM LETTER";
                 textBox1.Text = "";
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                pictureBox1.BackColor = Color.White;
+            }
+            else
+            {
+                pictureBox1.BackColor = Color.Black;
             }
         }
     }
