@@ -68,5 +68,23 @@ namespace Morse_Tutor.Properties {
                 return ResourceManager.GetString("MorseCodeImagePath", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\aldua\source\repos\Morse Tutor\assets\MostCommon100Words.txt.
+        /// </summary>
+        internal static string MostCommon100Words {
+            get {
+                return ResourceManager.GetString("MostCommon100Words", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace Morse_Tutor
     public partial class Form1 : Form
     {
         static bool LetterHasPlayed = false;
+        static bool WordHasPlayed = false;
 
         public Form1()
         {
@@ -22,6 +23,8 @@ namespace Morse_Tutor
             pictureBox1.BackColor = Color.White;
 
             checkBox1.Checked = true;
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
         }
 
 
@@ -64,6 +67,37 @@ namespace Morse_Tutor
             else
             {
                 pictureBox1.BackColor = Color.Black;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!WordHasPlayed)
+            {
+                Program.PlayWord();
+                
+                // init random word exercice
+                WordHasPlayed = true;
+                textBox2.Enabled = true;
+                button2.Text = "Replay";
+            }
+            else
+            {
+                Program.PlayWord(Program.PlayedWord);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Length > 0 && textBox2.Text == Program.PlayedWord)
+            {
+                label2.Text = "Sucess! Answer was indeed: " + Program.PlayedWord;
+                
+                // reinit random word exercice
+                WordHasPlayed = false;
+                textBox2.Enabled = false;
+                button2.Text = "RANDOM WORD";
+                textBox2.Text = "";
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +15,9 @@ namespace Morse_Tutor
 
     static class Program
     {
+        static Random Rand = new Random();
         static internal char PlayedLetter;
+        static internal string PlayedWord;
         static int UnitLength = 1000;
         static int Frequency = 2000;
         static Dictionary<char, string> Letters = new Dictionary<char, string> {
@@ -85,12 +88,34 @@ namespace Morse_Tutor
 
         internal static void PlayLetter()
         {
-            Random rand = new Random();
-            var randomLetter = Letters.ElementAt(rand.Next(0, Letters.Count)).Key;
+            var randomLetter = Letters.ElementAt(Rand.Next(0, Letters.Count())).Key;
             
             PlayLetter(randomLetter);
-
             PlayedLetter = randomLetter;
+        }
+
+        internal static void PlayWord()
+        {
+            var lines = File.ReadLines(Properties.Resources.MostCommon100Words);
+            var randomWord = lines.ElementAt(Rand.Next(0, lines.Count()));
+
+            PlayWord(randomWord);
+            PlayedWord = randomWord;
+        }
+
+        internal static void PlayWord(string word)
+        {
+
+            char lastLetter = word.Last();
+            foreach (char letter in word)
+            {
+                PlayLetter(letter);
+
+                if (letter != lastLetter)
+                {
+                    Thread.Sleep(UnitLength * 3);
+                }
+            }
         }
     }
 }
