@@ -18,8 +18,8 @@ namespace Morse_Tutor
         static Random Rand = new Random();
         static internal char PlayedLetter;
         static internal string PlayedWord;
-        static int UnitLength = 1000;
-        static int Frequency = 2000;
+        static int UnitLength = 500;
+        static int Frequency = 1000;
         static Dictionary<char, string> Letters = new Dictionary<char, string> {
             { 'a', "sL"},
             { 'b', "Lsss"},
@@ -96,7 +96,8 @@ namespace Morse_Tutor
 
         internal static void PlayWord()
         {
-            var lines = File.ReadLines(Properties.Resources.MostCommon100Words);
+            var lines = Properties.Resources.top_100_words.Split(
+                new string[] { "\r\n" }, StringSplitOptions.None);
             var randomWord = lines.ElementAt(Rand.Next(0, lines.Count()));
 
             PlayWord(randomWord);

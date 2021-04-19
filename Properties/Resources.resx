@@ -117,13 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MorseCodeImagePath" xml:space="preserve">
-    <value>C:\Users\aldua\source\repos\Morse Tutor\assets\International_Morse_Code.png</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="morse_code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\morse_code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MostCommon100Words" xml:space="preserve">
-    <value>C:\Users\aldua\source\repos\Morse Tutor\assets\MostCommon100Words.txt</value>
-  </data>
-  <data name="String" xml:space="preserve">
+  <data name="top100Words" xml:space="preserve">
     <value />
+  </data>
+  <data name="top_100_words" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\top_100_words.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

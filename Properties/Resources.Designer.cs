@@ -61,29 +61,128 @@ namespace Morse_Tutor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\aldua\source\repos\Morse Tutor\assets\International_Morse_Code.png.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string MorseCodeImagePath {
+        internal static System.Drawing.Bitmap morse_code {
             get {
-                return ResourceManager.GetString("MorseCodeImagePath", resourceCulture);
+                object obj = ResourceManager.GetObject("morse_code", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\aldua\source\repos\Morse Tutor\assets\MostCommon100Words.txt.
+        ///   Looks up a localized string similar to the
+        ///of
+        ///and
+        ///to
+        ///a
+        ///in
+        ///that
+        ///I
+        ///was
+        ///he
+        ///his
+        ///with
+        ///is
+        ///it
+        ///for
+        ///as
+        ///had
+        ///you
+        ///not
+        ///be
+        ///on
+        ///at
+        ///by
+        ///her
+        ///which
+        ///have
+        ///or
+        ///from
+        ///this
+        ///but
+        ///all
+        ///him
+        ///she
+        ///were
+        ///they
+        ///my
+        ///are
+        ///so
+        ///me
+        ///their
+        ///an
+        ///one
+        ///de
+        ///we
+        ///who
+        ///would
+        ///said
+        ///been
+        ///no
+        ///He
+        ///will
+        ///them
+        ///when
+        ///if
+        ///there
+        ///more
+        ///out
+        ///And
+        ///It
+        ///any
+        ///up
+        ///into
+        ///your
+        ///has
+        ///do
+        ///what
+        ///could
+        ///but
+        ///our
+        ///than
+        ///other
+        ///some
+        ///very
+        ///man
+        ///upon
+        ///about
+        ///its
+        ///only
+        ///time
+        ///may
+        ///la
+        ///like
+        ///little
+        ///then
+        ///now
+        ///should
+        ///can
+        ///made
+        ///did
+        ///such
+        ///A
+        ///great
+        ///In
+        ///must
+        ///these
+        ///two
+        ///before
+        ///see
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string MostCommon100Words {
+        internal static string top_100_words {
             get {
-                return ResourceManager.GetString("MostCommon100Words", resourceCulture);
+                return ResourceManager.GetString("top_100_words", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string String {
+        internal static string top100Words {
             get {
-                return ResourceManager.GetString("String", resourceCulture);
+                return ResourceManager.GetString("top100Words", resourceCulture);
             }
         }
     }

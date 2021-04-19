@@ -21,7 +21,7 @@ namespace Morse_Tutor
             InitializeComponent();
             Text = "Morse Tutor";
 
-            pictureBox1.ImageLocation = Properties.Resources.MorseCodeImagePath;
+            pictureBox1.Image = Properties.Resources.morse_code;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.BackColor = Color.White;
 
@@ -123,38 +123,52 @@ namespace Morse_Tutor
 
         private void RandomLetterExercice(char letter = '\0')
         {
-            label1.Text = "Playing letter";
-            textBox1.Enabled = false;
-            button1.Enabled = false;
-            button2.Enabled = false;
+            this.Invoke(new MethodInvoker(delegate ()
+            {
+                label1.Text = "Playing letter";
+                textBox1.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+            }));
 
             if (letter != '\0')
                 Program.PlayLetter(letter);
             else
                 Program.PlayLetter();
 
-            label1.Text = "Waiting for answer";
-            textBox1.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
+
+            this.Invoke(new MethodInvoker(delegate ()
+            {
+                label1.Text = "Waiting for answer";
+                textBox1.Enabled = true;
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }));
         }
 
         private void RandomWordExercice(string word="")
         {
-            label2.Text = "Playing word";
-            textBox2.Enabled = false;
-            button1.Enabled = false;
-            button2.Enabled = false;
+            this.Invoke(new MethodInvoker(delegate ()
+            {
+               label2.Text = "Playing word";
+               textBox2.Enabled = false;
+               button1.Enabled = false;
+               button2.Enabled = false;
+            }));
+
 
             if (word != "")
                 Program.PlayWord(Program.PlayedWord);
             else
                 Program.PlayWord();
 
-            label2.Text = "Waiting for answer";
-            textBox2.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
+            this.Invoke(new MethodInvoker(delegate ()
+            {
+                label2.Text = "Waiting for answer";
+                textBox2.Enabled = true;
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }));
         }
     }
 }
